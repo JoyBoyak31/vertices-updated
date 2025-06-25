@@ -1,0 +1,544 @@
+/* About.module.css - Updated for THEVERTICES */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
+
+.aboutContainer {
+  margin-top: 80px;
+  background: linear-gradient(135deg, #0f0f1b 0%, #1a1a2e 50%, #16213e 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.heroSection {
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(0, 188, 212, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.heroSection.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.titleWrapper {
+  margin-bottom: 2rem;
+}
+
+.mainTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.highlight {
+  background: linear-gradient(45deg, #00bcd4, #ba68c8, #ff7043);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 300;
+  color: #b0b0b0;
+  margin-top: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.companyDescription {
+  margin-top: 2rem;
+}
+
+.companyDescription p {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  line-height: 1.7;
+  color: #e0e0e0;
+  font-weight: 400;
+}
+
+/* Section Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+/* Mission Section */
+.missionSection {
+  padding: 4rem 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.missionSection.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.missionContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.missionText {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.missionText p {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  line-height: 1.8;
+  color: #e0e0e0;
+  font-weight: 400;
+}
+
+.problemSolution {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.problemBox,
+.solutionBox {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.problemBox {
+  border-left: 4px solid #ff7043;
+}
+
+.solutionBox {
+  border-left: 4px solid #00bcd4;
+}
+
+.problemBox h3,
+.solutionBox h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.problemBox ul,
+.solutionBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.problemBox ul li,
+.solutionBox ul li {
+  font-family: 'Inter', sans-serif;
+  color: #b0b0b0;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.problemBox ul li::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  color: #ff7043;
+  font-weight: bold;
+}
+
+.solutionBox ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+/* Ecosystem Section */
+.ecosystemSection {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.ecosystemSection.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.componentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.componentCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.componentCard:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.componentIcon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.componentIcon svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2;
+}
+
+.iconToken {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+}
+
+.iconAI {
+  background: rgba(0, 188, 212, 0.2);
+  color: #00bcd4;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+}
+
+.iconBlockchain {
+  background: rgba(186, 104, 200, 0.2);
+  color: #ba68c8;
+  box-shadow: 0 0 20px rgba(186, 104, 200, 0.3);
+}
+
+.iconSDK {
+  background: rgba(255, 112, 67, 0.2);
+  color: #ff7043;
+  box-shadow: 0 0 20px rgba(255, 112, 67, 0.3);
+}
+
+.iconMarketplace {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+.iconDAO {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9c27b0;
+  box-shadow: 0 0 20px rgba(156, 39, 176, 0.3);
+}
+
+.componentCard h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.componentCard p {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  line-height: 1.6;
+  color: #b0b0b0;
+  font-weight: 400;
+}
+
+/* Audience Section */
+.audienceSection {
+  padding: 4rem 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.audienceSection.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.audienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.audienceCard {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.audienceCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 188, 212, 0.3);
+}
+
+.audienceCard h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.audienceCard p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  line-height: 1.5;
+}
+
+/* Vision Section */
+.visionSection {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.visionSection.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.visionContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.visionText {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  line-height: 1.8;
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.visionFeatures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.visionFeature {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.visionIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.visionFeature h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.visionFeature p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(0, 188, 212, 0.1) 0%, rgba(186, 104, 200, 0.1) 100%);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.ctaSection.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ctaTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.ctaText {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: #b0b0b0;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.btnPrimary {
+  background: linear-gradient(45deg, #00bcd4, #ba68c8);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.4);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btnSecondary:hover {
+  background: #ffffff;
+  color: #0f0f1b;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .aboutContainer {
+    margin-top: 100px;
+  }
+  
+  .problemSolution {
+    grid-template-columns: 1fr;
+  }
+  
+  .componentsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .audienceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .visionFeatures {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .heroContent {
+    padding: 0 1rem;
+  }
+  
+  .componentCard {
+    padding: 1.5rem;
+  }
+  
+  .audienceGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .missionSection,
+  .ecosystemSection,
+  .audienceSection,
+  .visionSection,
+  .ctaSection {
+    padding: 3rem 0;
+  }
+  
+  .heroSection {
+    padding: 2rem 0;
+  }
+}

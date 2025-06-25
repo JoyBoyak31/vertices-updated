@@ -1,0 +1,499 @@
+/* Tokenomics.module.css - Fixed Layout */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
+
+.tokenomicsWrapper {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 80px;
+  background: linear-gradient(135deg, #0f0f1b 0%, #1a1a2e 50%, #16213e 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tokenomicsWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4rem;
+  text-align: center;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.visible .title {
+  animation: glow 2s ease-in-out infinite alternate, gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  from { 
+    filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.5)); 
+  }
+  to { 
+    filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.8)); 
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Main Container */
+.tokenomicsContainer {
+  position: relative;
+  width: 1000px;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 6rem auto;
+  max-width: 90vw;
+}
+
+/* Center Circle */
+.centerCircle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff00ff 0%, #8000ff 25%, #0080ff 50%, #00ffff 75%, #ff00ff 100%);
+  background-size: 400% 400%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 
+    0 0 60px rgba(255, 0, 255, 0.5),
+    0 0 100px rgba(0, 255, 255, 0.3),
+    inset 0 0 50px rgba(0, 255, 255, 0.2);
+  z-index: 5;
+}
+
+.visible .centerCircle {
+  animation: rotate 20s linear infinite, gradientMove 8s ease-in-out infinite;
+}
+
+.centerCircle::before {
+  content: '';
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a1347 0%, #2d1b5e 100%);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+.innerCircle {
+  position: relative;
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tokenSymbol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.tokenIcon {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.tokenName {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  letter-spacing: 2px;
+}
+
+/* Info Cards */
+.infoCard {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  width: 220px;
+  min-height: 140px;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.visible .infoCard {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.infoCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.25);
+  z-index: 20;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.colorIndicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px currentColor;
+  position: relative;
+}
+
+.colorIndicator::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.percentage {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.cardTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.cardDescription {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #ccc;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.cardLine {
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 0 8px currentColor;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardLine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* Total Supply */
+.totalSupply {
+  position: absolute;
+  bottom: 240px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px 32px;
+  z-index: 15;
+}
+
+.supplyLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+
+.supplyValue {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Mobile Cards Grid */
+.mobileCardsGrid {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.mobileCard {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.mobileCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.mobileCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.mobileColorIndicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px currentColor;
+}
+
+.mobilePercentage {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.mobileCardTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.mobileCardDescription {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Grid Background */
+.gridBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 0, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+}
+
+.visible .gridBackground {
+  animation: gridMove 30s linear infinite;
+}
+
+/* Animations */
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes gradientMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes gridMove {
+  from { transform: translate(0, 0); }
+  to { transform: translate(50px, 50px); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tokenomicsContainer {
+    width: 800px;
+    height: 800px;
+  }
+  
+  .infoCard {
+    width: 200px;
+    min-height: 130px;
+    padding: 16px;
+  }
+  
+  .percentage {
+    font-size: 1.4rem;
+  }
+  
+  .cardTitle {
+    font-size: 0.9rem;
+  }
+  
+  .cardDescription {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tokenomicsContainer {
+    width: 700px;
+    height: 700px;
+  }
+  
+  .infoCard {
+    width: 180px;
+    min-height: 120px;
+    padding: 14px;
+  }
+  
+  .centerCircle {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .centerCircle::before {
+    width: 210px;
+    height: 210px;
+  }
+  
+  .innerCircle {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .tokenIcon {
+    font-size: 2.5rem;
+  }
+  
+  .tokenName {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tokenomicsWrapper {
+    margin-top: 100px;
+    padding: 20px 15px;
+  }
+  
+  .tokenomicsContainer {
+    display: none;
+  }
+  
+  .mobileCardsGrid {
+    display: grid;
+  }
+  
+  .title {
+    margin-bottom: 2rem;
+  }
+  
+  .totalSupply {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 2rem;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tokenomicsWrapper {
+    padding: 20px 10px;
+  }
+  
+  .mobileCardsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .mobileCard {
+    padding: 16px;
+  }
+}
