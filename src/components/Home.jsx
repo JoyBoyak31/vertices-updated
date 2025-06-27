@@ -50,7 +50,7 @@ const Home = () => {
               a fusion of AI, blockchain, and decentralized finance (DeFi).
             </p>
             <div className={styles.heroButtons}>
-              <a href="../../public/whitepaper.pdf" target="_blank" className={`${styles.btn} ${styles.btnSecondary}`}>
+              <a href="../../public/vtx.pdf" target="_blank" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Read Whitepaper
               </a>
             </div>
