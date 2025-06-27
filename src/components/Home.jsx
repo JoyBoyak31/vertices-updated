@@ -46,16 +46,13 @@ const Home = () => {
               Digital Commerce
             </h1>
             <p className={styles.heroSubtitle}>
-              Vertices Network is redefining the future of eCommerce and logistics through 
+              The Vertices Network is redefining the future of eCommerce and logistics through 
               a fusion of AI, blockchain, and decentralized finance (DeFi).
             </p>
             <div className={styles.heroButtons}>
-              <button className={`${styles.btn} ${styles.btnPrimary}`}>
-                Explore VTXN Token
-              </button>
-              <button className={`${styles.btn} ${styles.btnSecondary}`}>
+              <a href="../../public/whitepaper.pdf" target="_blank" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Read Whitepaper
-              </button>
+              </a>
             </div>
           </div>
 
@@ -158,29 +155,62 @@ const Home = () => {
             <div className={styles.timelineItem}>
               <div className={`${styles.timelineMarker} ${styles.completed}`}></div>
               <div className={styles.timelineContent}>
-                <h4>Q3 2025 - Genesis Launch</h4>
-                <p>Token Generation Event (TGE) on BNB Chain and major exchange listings</p>
+                <h4>Q3 2025 </h4>
+                <p> <ul>
+                  <li>Token Generation Event (TGE)</li>
+                  <li>Staking pool and AI dashboard (beta)</li>
+                </ul></p>
               </div>
             </div>
             <div className={styles.timelineItem}>
               <div className={`${styles.timelineMarker} ${styles.current}`}></div>
               <div className={styles.timelineContent}>
-                <h4>Q4 2025 - Live Pilot Phase</h4>
-                <p>Partner with regional eCommerce platforms and launch AI-driven traceability</p>
+                <h4>Q4 2025</h4>
+                <ul>
+                  <li>eCommerce pilots, logistics partner onboarding</li>
+                  <li>Listings on major exchanges</li>
+                </ul>
               </div>
             </div>
             <div className={styles.timelineItem}>
               <div className={styles.timelineMarker}></div>
               <div className={styles.timelineContent}>
-                <h4>2026 - Mainnet Rollout</h4>
-                <p>Enterprise API suite and global logistics integrations</p>
+                <h4>2026</h4>
+                 <ul>
+                  <li>Vertices Mainnet and API Suite</li>
+                  <li>SDK for Web3 marketplaces</li>
+                </ul>
               </div>
             </div>
             <div className={styles.timelineItem}>
               <div className={styles.timelineMarker}></div>
               <div className={styles.timelineContent}>
-                <h4>2027-2030 - Mass Adoption</h4>
-                <p>AI-driven autonomous commerce and enterprise suite deployment</p>
+                <h4>2027</h4>
+                <ul>
+                  <li>Vertices Marketplace</li>
+                  <li>Autonomous AI routing systems</li>
+                </ul>
+              </div>
+            </div>
+              <div className={styles.timelineItem}>
+              <div className={styles.timelineMarker}></div>
+              <div className={styles.timelineContent}>
+                <h4> 2028</h4>
+                 <ul>
+                  <li> DAO governance launch</li>
+                  <li>The Vertices ID (Soulbound identities)</li>
+                </ul>
+              </div>
+            </div>
+              <div className={styles.timelineItem}>
+              <div className={styles.timelineMarker}></div>
+              <div className={styles.timelineContent}>
+                <h4>2029–2030</h4>
+                <ul>
+                  <li> Vertices ERP for enterprises</li>
+                  <li>50M+ transactions/year</li>
+                   <li>Mass adoption by top eCommerce brands</li>
+                </ul>
               </div>
             </div>
           </div>

@@ -35,7 +35,7 @@ const Roadmap = () => {
       <section className={styles.heroSection} ref={addToRefs}>
         <div className={styles.heroContent}>
           <h1 className={styles.mainTitle}>
-            Vertices <span className={styles.highlight}>Roadmap</span>
+            The The Vertices <span className={styles.highlight}>Roadmap</span>
           </h1>
           <p className={styles.subtitle}>
             Our journey to revolutionize global commerce through AI, blockchain, and decentralized finance
@@ -53,24 +53,22 @@ const Roadmap = () => {
               <div className={`${styles.timelineMarker} ${styles.completed}`}>
                 <span className={styles.markerIcon}>🚀</span>
               </div>
-              <div className={styles.timelineContent}>
+                <div className={styles.timelineContent}>
                 <div className={styles.timelineDate}>Q3 2025</div>
-                <h3>Genesis Launch</h3>
+                
                 <div className={styles.milestones}>
                   <div className={styles.milestone}>
-                    <span className={styles.checkIcon}>✅</span>
-                    <span>Token Generation Event (TGE) on BNB Chain</span>
+                    <span className={styles.progressIcon}>🔄</span>
+                    <span>Token Generation Event (TGE)</span>
                   </div>
                   <div className={styles.milestone}>
-                    <span className={styles.checkIcon}>✅</span>
-                    <span>Launch on major DEXs & CEXs</span>
+                    <span className={styles.progressIcon}>🔄</span>
+                    <span>Staking pool and AI dashboard (beta)</span>
                   </div>
-                  <div className={styles.milestone}>
-                    <span className={styles.checkIcon}>✅</span>
-                    <span>Staking pool and reward system activation</span>
-                  </div>
+                  
                 </div>
               </div>
+             
             </div>
 
             {/* Q4 2025 - Live Pilot Phase */}
@@ -78,22 +76,19 @@ const Roadmap = () => {
               <div className={`${styles.timelineMarker} ${styles.current}`}>
                 <span className={styles.markerIcon}>⚡</span>
               </div>
-              <div className={styles.timelineContent}>
+            <div className={styles.timelineContent}>
                 <div className={styles.timelineDate}>Q4 2025</div>
-                <h3>Live Pilot Phase</h3>
+               
                 <div className={styles.milestones}>
                   <div className={styles.milestone}>
-                    <span className={styles.progressIcon}>🔄</span>
-                    <span>Partner with regional eCommerce platforms</span>
+                    <span className={styles.checkIcon}>✅</span>
+                    <span>eCommerce pilots, logistics partner onboarding</span>
                   </div>
                   <div className={styles.milestone}>
-                    <span className={styles.progressIcon}>🔄</span>
-                    <span>Launch AI-driven traceability dashboard (beta)</span>
+                    <span className={styles.checkIcon}>✅</span>
+                    <span>Listings on major exchanges</span>
                   </div>
-                  <div className={styles.milestone}>
-                    <span className={styles.progressIcon}>🔄</span>
-                    <span>Begin onboarding logistics providers</span>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -105,20 +100,17 @@ const Roadmap = () => {
               </div>
               <div className={styles.timelineContent}>
                 <div className={styles.timelineDate}>2026</div>
-                <h3>Mainnet Rollout</h3>
+            
                 <div className={styles.milestones}>
                   <div className={styles.milestone}>
                     <span className={styles.futureIcon}>⏳</span>
-                    <span>Vertices Mainnet activation with enterprise API suite</span>
+                    <span> Vertices Mainnet and API Suite</span>
                   </div>
                   <div className={styles.milestone}>
                     <span className={styles.futureIcon}>⏳</span>
-                    <span>Launch eComm Plugin SDK for Web3 marketplaces</span>
+                    <span> SDK for Web3 marketplaces</span>
                   </div>
-                  <div className={styles.milestone}>
-                    <span className={styles.futureIcon}>⏳</span>
-                    <span>First global logistics integrations (Top 20 players)</span>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -130,20 +122,17 @@ const Roadmap = () => {
               </div>
               <div className={styles.timelineContent}>
                 <div className={styles.timelineDate}>2027</div>
-                <h3>AI + Web3 Expansion</h3>
+               
                 <div className={styles.milestones}>
                   <div className={styles.milestone}>
                     <span className={styles.futureIcon}>⏳</span>
-                    <span>Self-healing supply chain AI released</span>
+                    <span>Vertices Marketplace</span>
                   </div>
                   <div className={styles.milestone}>
                     <span className={styles.futureIcon}>⏳</span>
-                    <span>Launch of Vertices Marketplace (peer-to-peer commerce)</span>
+                    <span>Autonomous AI routing system</span>
                   </div>
-                  <div className={styles.milestone}>
-                    <span className={styles.futureIcon}>⏳</span>
-                    <span>Rollout of decentralized reputation & scoring system</span>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -155,20 +144,17 @@ const Roadmap = () => {
               </div>
               <div className={styles.timelineContent}>
                 <div className={styles.timelineDate}>2028</div>
-                <h3>Global Scaling</h3>
+                
                 <div className={styles.milestones}>
                   <div className={styles.milestone}>
                     <span className={styles.futureIcon}>⏳</span>
-                    <span>Geographic expansion: US, EU, SEA</span>
+                    <span>DAO governance launch</span>
                   </div>
                   <div className={styles.milestone}>
                     <span className={styles.futureIcon}>⏳</span>
-                    <span>Vertices ID for verified sellers & buyers (Soulbound Tokens)</span>
+                    <span>The Vertices ID (Soulbound identities)</span>
                   </div>
-                  <div className={styles.milestone}>
-                    <span className={styles.futureIcon}>⏳</span>
-                    <span>Open governance via Vertices DAO (token-holder voting)</span>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -180,24 +166,21 @@ const Roadmap = () => {
               </div>
               <div className={styles.timelineContent}>
                 <div className={styles.timelineDate}>2029 - 2030</div>
-                <h3>Mass Adoption & Autonomous Commerce</h3>
+               
                 <div className={styles.milestones}>
                   <div className={styles.milestone}>
                     <span className={styles.futureIcon}>⏳</span>
-                    <span>Vertices handles 50M+ transactions/year</span>
+                    <span>Vertices ERP for enterprises</span>
                   </div>
                   <div className={styles.milestone}>
                     <span className={styles.futureIcon}>⏳</span>
-                    <span>Used by top 10 global eCommerce brands</span>
+                    <span>50M+ transactions/year</span>
                   </div>
                   <div className={styles.milestone}>
                     <span className={styles.futureIcon}>⏳</span>
-                    <span>AI-driven autonomous logistics & fulfillment zones</span>
+                    <span>Mass adoption by top eCommerce brands</span>
                   </div>
-                  <div className={styles.milestone}>
-                    <span className={styles.futureIcon}>⏳</span>
-                    <span>Launch of Vertices Enterprise Suite (Web3-native ERP)</span>
-                  </div>
+                 
                 </div>
               </div>
             </div>

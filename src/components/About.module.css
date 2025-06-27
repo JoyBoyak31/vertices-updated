@@ -1,5 +1,6 @@
 /* About.module.css - Updated for THEVERTICES */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 .aboutContainer {
   margin-top: 80px;
@@ -37,7 +38,7 @@
 }
 
 .mainTitle {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 900;
   margin: 0;
@@ -83,7 +84,7 @@
 }
 
 .sectionTitle {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: 700;
   text-align: center;
@@ -147,7 +148,7 @@
 
 .problemBox h3,
 .solutionBox h3 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -275,7 +276,7 @@
 }
 
 .componentCard h3 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(1.2rem, 3vw, 1.4rem);
   font-weight: 600;
   margin-bottom: 1rem;
@@ -324,7 +325,7 @@
 }
 
 .audienceCard h4 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -369,6 +370,7 @@
 
 .visionFeatures {
   display: grid;
+  text-align: center !important;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
@@ -385,7 +387,7 @@
 }
 
 .visionFeature h4 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
@@ -415,7 +417,7 @@
 }
 
 .ctaTitle {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: 700;
   margin-bottom: 1rem;

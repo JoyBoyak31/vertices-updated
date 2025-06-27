@@ -1,11 +1,11 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #0f0f1b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,19 +15,21 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #00bcd4;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #ba68c8;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* Remove this problematic property */
+  /* display: flex; */
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -52,17 +54,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

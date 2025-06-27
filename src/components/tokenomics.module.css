@@ -29,7 +29,7 @@
 }
 
 .title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
   background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
@@ -136,7 +136,7 @@
 }
 
 .tokenName {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   color: #00ffff;
@@ -206,7 +206,7 @@
 }
 
 .percentage {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
   color: #fff;
@@ -214,7 +214,7 @@
 }
 
 .cardTitle {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   color: #fff;
   font-weight: 600;
@@ -273,7 +273,7 @@
 }
 
 .supplyValue {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
   color: #00ffff;
@@ -321,7 +321,7 @@
 }
 
 .mobilePercentage {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   color: #fff;
@@ -329,7 +329,7 @@
 }
 
 .mobileCardTitle {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
   color: #fff;
   font-weight: 600;
@@ -396,8 +396,8 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .tokenomicsContainer {
-    width: 800px;
-    height: 800px;
+    width: 900px;
+    height: 900px;
   }
   
   .infoCard {
@@ -417,12 +417,20 @@
   .cardDescription {
     font-size: 0.75rem;
   }
+  
+  .totalSupply {
+    bottom: 200px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .tokenomicsWrapper {
+    padding: 30px 15px;
+  }
+  
   .tokenomicsContainer {
-    width: 700px;
-    height: 700px;
+    width: 750px;
+    height: 750px;
   }
   
   .infoCard {
@@ -432,18 +440,18 @@
   }
   
   .centerCircle {
-    width: 250px;
-    height: 250px;
+    width: 260px;
+    height: 260px;
   }
   
   .centerCircle::before {
-    width: 210px;
-    height: 210px;
+    width: 220px;
+    height: 220px;
   }
   
   .innerCircle {
-    width: 160px;
-    height: 160px;
+    width: 170px;
+    height: 170px;
   }
   
   .tokenIcon {
@@ -452,6 +460,67 @@
   
   .tokenName {
     font-size: 1.3rem;
+  }
+  
+  .totalSupply {
+    bottom: 170px;
+    padding: 14px 28px;
+  }
+  
+  .supplyValue {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .tokenomicsContainer {
+    width: 650px;
+    height: 650px;
+  }
+  
+  .infoCard {
+    width: 160px;
+    min-height: 110px;
+    padding: 12px;
+  }
+  
+  .percentage {
+    font-size: 1.2rem;
+  }
+  
+  .cardTitle {
+    font-size: 0.8rem;
+  }
+  
+  .cardDescription {
+    font-size: 0.7rem;
+  }
+  
+  .centerCircle {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .centerCircle::before {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .innerCircle {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .tokenIcon {
+    font-size: 2rem;
+  }
+  
+  .tokenName {
+    font-size: 1.1rem;
+  }
+  
+  .totalSupply {
+    bottom: 140px;
   }
 }
 
@@ -462,15 +531,43 @@
   }
   
   .tokenomicsContainer {
-    display: none;
+    width: 500px;
+    height: 700px;
+    margin-bottom: 3rem;
+  }
+  
+  .centerCircle {
+    width: 180px;
+    height: 180px;
+    top: 20%;
+  }
+  
+  .centerCircle::before {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .innerCircle {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .tokenIcon {
+    font-size: 1.5rem;
+  }
+  
+  .tokenName {
+    font-size: 0.9rem;
   }
   
   .mobileCardsGrid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   
   .title {
     margin-bottom: 2rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
   }
   
   .totalSupply {
@@ -483,9 +580,36 @@
   }
 }
 
+@media (max-width: 600px) {
+  .mobileCardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .mobileCard {
+    padding: 18px;
+  }
+  
+  .mobilePercentage {
+    font-size: 1.3rem;
+  }
+  
+  .mobileCardTitle {
+    font-size: 1rem;
+  }
+  
+  .mobileCardDescription {
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 480px) {
   .tokenomicsWrapper {
     padding: 20px 10px;
+  }
+  
+  .tokenomicsContainer {
+    display: none;
   }
   
   .mobileCardsGrid {
@@ -495,5 +619,34 @@
   
   .mobileCard {
     padding: 16px;
+  }
+  
+  .title {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .mobilePercentage {
+    font-size: 1.2rem;
+  }
+  
+  .mobileCardTitle {
+    font-size: 0.95rem;
+  }
+  
+  .mobileCardDescription {
+    font-size: 0.8rem;
+  }
+  
+  .totalSupply {
+    padding: 10px 20px;
+  }
+  
+  .supplyLabel {
+    font-size: 0.8rem;
+  }
+  
+  .supplyValue {
+    font-size: 1rem;
   }
 }

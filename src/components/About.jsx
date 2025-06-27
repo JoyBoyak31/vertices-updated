@@ -36,14 +36,14 @@ const About = () => {
         <div className={styles.heroContent}>
           <div className={styles.titleWrapper}>
             <h1 className={styles.mainTitle}>
-              About <span className={styles.highlight}>THEVERTICES</span>
+              About <span className={styles.highlight}>THE VERTICES</span>
             </h1>
             <div className={styles.subtitle}>Building the Infrastructure for Autonomous Commerce</div>
           </div>
           
           <div className={styles.companyDescription}>
             <p>
-              THEVERTICES is a future-first technology company building the infrastructure for 
+              THE VERTICES is a future-first technology company building the infrastructure for 
               autonomous, intelligent, and decentralized global commerce through blockchain-enabled, 
               AI-powered platforms.
             </p>
@@ -87,7 +87,7 @@ const About = () => {
       {/* Ecosystem Components */}
       <section className={styles.ecosystemSection} ref={addToRefs}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>THEVERTICES Ecosystem</h2>
+          <h2 className={styles.sectionTitle}>THE VERTICES Ecosystem</h2>
           <div className={styles.componentsGrid}>
             <div className={styles.componentCard}>
               <div className={`${styles.componentIcon} ${styles.iconToken}`}>
@@ -96,7 +96,7 @@ const About = () => {
                   <path d="M12 6v6l4 2"/>
                 </svg>
               </div>
-              <h3>Vertices Network (VTXN)</h3>
+              <h3>The Vertices Network (VTXN)</h3>
               <p>Native token powering traceability, payments, staking, and governance across the entire ecosystem.</p>
             </div>
 
@@ -205,7 +205,7 @@ const About = () => {
           <div className={styles.visionContent}>
             <p className={styles.visionText}>
               The next decade of commerce is decentralized, intelligent, and automated. 
-              Vertices Network is designed to support the future of global trade.
+              The Vertices Network is designed to support the future of global trade.
             </p>
             <div className={styles.visionFeatures}>
               <div className={styles.visionFeature}>
