@@ -46,11 +46,11 @@ const Home = () => {
               Digital Commerce
             </h1>
             <p className={styles.heroSubtitle}>
-              The Vertices Network is redefining the future of eCommerce and logistics through 
+              The Vertices Network is redefining the future of eCommerce and logistics through
               a fusion of AI, blockchain, and decentralized finance (DeFi).
             </p>
             <div className={styles.heroButtons}>
-              <a href="../../public/vtx.pdf" target="_blank" className={`${styles.btn} ${styles.btnSecondary}`}>
+              <a href="../../public/vertices-whitepaper.pdf" target="_blank" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Read Whitepaper
               </a>
             </div>
@@ -69,14 +69,14 @@ const Home = () => {
       {/* Key Features Section */}
       <section className={styles.featuresSection} ref={addToRefs}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Revolutionizing Commerce</h2>
+          <h2 className={styles.sectionTitle}>Pioneering the Next Era of Commerce</h2>
           <div className={styles.featuresGrid}>
             <div className={styles.featureCard}>
               <div className={`${styles.featureIcon} ${styles.iconAI}`}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                  <path d="M2 17l10 5 10-5"/>
-                  <path d="M2 12l10 5 10-5"/>
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
                 </svg>
               </div>
               <h3>AI-Powered Agents</h3>
@@ -86,8 +86,8 @@ const Home = () => {
             <div className={styles.featureCard}>
               <div className={`${styles.featureIcon} ${styles.iconBlockchain}`}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M9 12l2 2 4-4"/>
-                  <path d="M21 12c-1.1-2.3-3.6-4-6.5-4s-5.4 1.7-6.5 4c1.1 2.3 3.6 4 6.5 4s5.4-1.7 6.5-4z"/>
+                  <path d="M9 12l2 2 4-4" />
+                  <path d="M21 12c-1.1-2.3-3.6-4-6.5-4s-5.4 1.7-6.5 4c1.1 2.3 3.6 4 6.5 4s5.4-1.7 6.5-4z" />
                 </svg>
               </div>
               <h3>On-Chain Traceability</h3>
@@ -97,7 +97,7 @@ const Home = () => {
             <div className={styles.featureCard}>
               <div className={`${styles.featureIcon} ${styles.iconAutomation}`}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                 </svg>
               </div>
               <h3>Self-Healing Supply Chains</h3>
@@ -107,8 +107,8 @@ const Home = () => {
             <div className={styles.featureCard}>
               <div className={`${styles.featureIcon} ${styles.iconIoT}`}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <circle cx="12" cy="12" r="3"/>
-                  <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" />
                 </svg>
               </div>
               <h3>IoT Integration</h3>
@@ -156,10 +156,10 @@ const Home = () => {
               <div className={`${styles.timelineMarker} ${styles.completed}`}></div>
               <div className={styles.timelineContent}>
                 <h4>Q3 2025 </h4>
-                <p> <ul>
+                <ul>
                   <li>Token Generation Event (TGE)</li>
                   <li>Staking pool and AI dashboard (beta)</li>
-                </ul></p>
+                </ul>
               </div>
             </div>
             <div className={styles.timelineItem}>
@@ -176,7 +176,7 @@ const Home = () => {
               <div className={styles.timelineMarker}></div>
               <div className={styles.timelineContent}>
                 <h4>2026</h4>
-                 <ul>
+                <ul>
                   <li>Vertices Mainnet and API Suite</li>
                   <li>SDK for Web3 marketplaces</li>
                 </ul>
@@ -192,24 +192,24 @@ const Home = () => {
                 </ul>
               </div>
             </div>
-              <div className={styles.timelineItem}>
+            <div className={styles.timelineItem}>
               <div className={styles.timelineMarker}></div>
               <div className={styles.timelineContent}>
                 <h4> 2028</h4>
-                 <ul>
+                <ul>
                   <li> DAO governance launch</li>
                   <li>The Vertices ID (Soulbound identities)</li>
                 </ul>
               </div>
             </div>
-              <div className={styles.timelineItem}>
+            <div className={styles.timelineItem}>
               <div className={styles.timelineMarker}></div>
               <div className={styles.timelineContent}>
                 <h4>2029–2030</h4>
                 <ul>
                   <li> Vertices ERP for enterprises</li>
                   <li>50M+ transactions/year</li>
-                   <li>Mass adoption by top eCommerce brands</li>
+                  <li>Mass adoption by top eCommerce brands</li>
                 </ul>
               </div>
             </div>
@@ -218,7 +218,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-    
+
     </div>
   );
 };

@@ -1,10 +1,10 @@
-/* Tokenomics.module.css - Fixed Layout */
+/* Tokenomics.module.css - Updated with Large Font Sizes */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
 
 .tokenomicsWrapper {
   width: 100%;
   min-height: 100vh;
-  margin-top: 80px;
+  margin-top: 100px;
   background: linear-gradient(135deg, #0f0f1b 0%, #1a1a2e 50%, #16213e 100%);
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
 
 .title {
   font-family: 'Roboto', sans-serif;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(3rem, 7vw, 4rem); /* Increased from 2rem, 5vw, 4rem */
   font-weight: 900;
   background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
   background-size: 300% 300%;
@@ -40,19 +40,6 @@
   margin-bottom: 4rem;
   text-align: center;
   animation: gradientShift 3s ease-in-out infinite;
-}
-
-.visible .title {
-  animation: glow 2s ease-in-out infinite alternate, gradientShift 3s ease-in-out infinite;
-}
-
-@keyframes glow {
-  from { 
-    filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.5)); 
-  }
-  to { 
-    filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.8)); 
-  }
 }
 
 @keyframes gradientShift {
@@ -129,7 +116,7 @@
 }
 
 .tokenIcon {
-  font-size: 3rem;
+  font-size: 4rem; /* Increased from 3rem */
   font-weight: bold;
   color: #fff;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
@@ -137,7 +124,7 @@
 
 .tokenName {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem; /* Increased from 1.5rem */
   font-weight: bold;
   color: #00ffff;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
@@ -152,8 +139,8 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   padding: 20px;
-  width: 220px;
-  min-height: 140px;
+  width: 250px; /* Increased from 220px */
+  min-height: 160px; /* Increased from 140px */
   transition: all 0.4s ease;
   opacity: 0;
   transform: translateY(30px);
@@ -186,8 +173,8 @@
 }
 
 .colorIndicator {
-  width: 16px;
-  height: 16px;
+  width: 20px; /* Increased from 16px */
+  height: 20px; /* Increased from 16px */
   border-radius: 50%;
   box-shadow: 0 0 15px currentColor;
   position: relative;
@@ -196,8 +183,8 @@
 .colorIndicator::after {
   content: '';
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 10px; /* Increased from 8px */
+  height: 10px; /* Increased from 8px */
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.8);
   top: 50%;
@@ -207,7 +194,7 @@
 
 .percentage {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem;
+  font-size: 2.2rem; /* Increased from 1.6rem */
   font-weight: bold;
   color: #fff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -215,7 +202,7 @@
 
 .cardTitle {
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-size: 1.4rem; /* Increased from 1rem */
   color: #fff;
   font-weight: 600;
   margin-bottom: 4px;
@@ -224,14 +211,14 @@
 
 .cardDescription {
   font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem; /* Increased from 0.8rem */
   color: #ccc;
-  font-weight: 400;
+  font-weight: 500; /* Increased from 400 */
   line-height: 1.4;
 }
 
 .cardLine {
-  height: 3px;
+  height: 4px; /* Increased from 3px */
   width: 100%;
   border-radius: 2px;
   box-shadow: 0 0 8px currentColor;
@@ -253,7 +240,7 @@
 /* Total Supply */
 .totalSupply {
   position: absolute;
-  bottom: 240px;
+  bottom: 200px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -261,20 +248,21 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 16px 32px;
+  padding: 20px 40px; /* Increased from 16px 32px */
   z-index: 15;
 }
 
 .supplyLabel {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.2rem; /* Increased from 0.9rem */
   color: #ccc;
   margin-bottom: 4px;
+  font-weight: 500;
 }
 
 .supplyValue {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.8rem; /* Increased from 1.2rem */
   font-weight: bold;
   color: #00ffff;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
@@ -283,7 +271,7 @@
 /* Mobile Cards Grid */
 .mobileCardsGrid {
   display: none;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Increased from 280px */
   gap: 1.5rem;
   width: 100%;
   max-width: 1200px;
@@ -295,7 +283,7 @@
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 20px;
+  padding: 24px; /* Increased from 20px */
   transition: all 0.3s ease;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
@@ -309,20 +297,20 @@
 .mobileCardHeader {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 15px; /* Increased from 12px */
+  margin-bottom: 15px; /* Increased from 12px */
 }
 
 .mobileColorIndicator {
-  width: 16px;
-  height: 16px;
+  width: 20px; /* Increased from 16px */
+  height: 20px; /* Increased from 16px */
   border-radius: 50%;
   box-shadow: 0 0 15px currentColor;
 }
 
 .mobilePercentage {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.4rem;
+  font-size: 2rem; /* Increased from 1.4rem */
   font-weight: bold;
   color: #fff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -330,17 +318,18 @@
 
 .mobileCardTitle {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.6rem; /* Increased from 1.1rem */
   color: #fff;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 10px; /* Increased from 8px */
 }
 
 .mobileCardDescription {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.2rem; /* Increased from 0.9rem */
   color: #ccc;
   line-height: 1.5;
+  font-weight: 500;
 }
 
 /* Grid Background */
@@ -401,21 +390,21 @@
   }
   
   .infoCard {
-    width: 200px;
-    min-height: 130px;
-    padding: 16px;
+    width: 230px; /* Increased from 200px */
+    min-height: 150px; /* Increased from 130px */
+    padding: 18px; /* Increased from 16px */
   }
   
   .percentage {
-    font-size: 1.4rem;
+    font-size: 2rem; /* Increased from 1.4rem */
   }
   
   .cardTitle {
-    font-size: 0.9rem;
+    font-size: 1.2rem; /* Increased from 0.9rem */
   }
   
   .cardDescription {
-    font-size: 0.75rem;
+    font-size: 1rem; /* Increased from 0.75rem */
   }
   
   .totalSupply {
@@ -434,9 +423,9 @@
   }
   
   .infoCard {
-    width: 180px;
-    min-height: 120px;
-    padding: 14px;
+    width: 210px; /* Increased from 180px */
+    min-height: 140px; /* Increased from 120px */
+    padding: 16px; /* Increased from 14px */
   }
   
   .centerCircle {
@@ -455,20 +444,20 @@
   }
   
   .tokenIcon {
-    font-size: 2.5rem;
+    font-size: 3.5rem; /* Increased from 2.5rem */
   }
   
   .tokenName {
-    font-size: 1.3rem;
+    font-size: 1.8rem; /* Increased from 1.3rem */
   }
   
   .totalSupply {
     bottom: 170px;
-    padding: 14px 28px;
+    padding: 16px 32px; /* Increased from 14px 28px */
   }
   
   .supplyValue {
-    font-size: 1.1rem;
+    font-size: 1.5rem; /* Increased from 1.1rem */
   }
 }
 
@@ -479,21 +468,21 @@
   }
   
   .infoCard {
-    width: 160px;
-    min-height: 110px;
-    padding: 12px;
+    width: 190px; /* Increased from 160px */
+    min-height: 130px; /* Increased from 110px */
+    padding: 14px; /* Increased from 12px */
   }
   
   .percentage {
-    font-size: 1.2rem;
+    font-size: 1.8rem; /* Increased from 1.2rem */
   }
   
   .cardTitle {
-    font-size: 0.8rem;
+    font-size: 1.1rem; /* Increased from 0.8rem */
   }
   
   .cardDescription {
-    font-size: 0.7rem;
+    font-size: 0.95rem; /* Increased from 0.7rem */
   }
   
   .centerCircle {
@@ -512,11 +501,11 @@
   }
   
   .tokenIcon {
-    font-size: 2rem;
+    font-size: 3rem; /* Increased from 2rem */
   }
   
   .tokenName {
-    font-size: 1.1rem;
+    font-size: 1.5rem; /* Increased from 1.1rem */
   }
   
   .totalSupply {
@@ -553,21 +542,21 @@
   }
   
   .tokenIcon {
-    font-size: 1.5rem;
+    font-size: 2.5rem; /* Increased from 1.5rem */
   }
   
   .tokenName {
-    font-size: 0.9rem;
+    font-size: 1.3rem; /* Increased from 0.9rem */
   }
   
   .mobileCardsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased from 250px */
   }
   
   .title {
     margin-bottom: 2rem;
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Increased from 1.8rem, 4vw, 3rem */
   }
   
   .totalSupply {
@@ -576,30 +565,30 @@
     left: auto;
     transform: none;
     margin-top: 2rem;
-    padding: 12px 24px;
+    padding: 15px 30px; /* Increased from 12px 24px */
   }
 }
 
 @media (max-width: 600px) {
   .mobileCardsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Increased from 280px */
     gap: 1.2rem;
   }
   
   .mobileCard {
-    padding: 18px;
+    padding: 22px; /* Increased from 18px */
   }
   
   .mobilePercentage {
-    font-size: 1.3rem;
+    font-size: 1.8rem; /* Increased from 1.3rem */
   }
   
   .mobileCardTitle {
-    font-size: 1rem;
+    font-size: 1.4rem; /* Increased from 1rem */
   }
   
   .mobileCardDescription {
-    font-size: 0.85rem;
+    font-size: 1.1rem; /* Increased from 0.85rem */
   }
 }
 
@@ -618,35 +607,35 @@
   }
   
   .mobileCard {
-    padding: 16px;
+    padding: 20px; /* Increased from 16px */
   }
   
   .title {
-    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem); /* Increased from 1.5rem, 3.5vw, 2.5rem */
     margin-bottom: 1.5rem;
   }
   
   .mobilePercentage {
-    font-size: 1.2rem;
+    font-size: 1.6rem; /* Increased from 1.2rem */
   }
   
   .mobileCardTitle {
-    font-size: 0.95rem;
+    font-size: 1.3rem; /* Increased from 0.95rem */
   }
   
   .mobileCardDescription {
-    font-size: 0.8rem;
+    font-size: 1rem; /* Increased from 0.8rem */
   }
   
   .totalSupply {
-    padding: 10px 20px;
+    padding: 12px 24px; /* Increased from 10px 20px */
   }
   
   .supplyLabel {
-    font-size: 0.8rem;
+    font-size: 1rem; /* Increased from 0.8rem */
   }
   
   .supplyValue {
-    font-size: 1rem;
+    font-size: 1.4rem; /* Increased from 1rem */
   }
 }

@@ -54,7 +54,7 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
               rel="noopener noreferrer"
               className={styles.navLink}
             >
-            SignUp / SignIn
+            Sign-in / Sign-up
             </a>
           </button>
 
@@ -106,7 +106,7 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
               rel="noopener noreferrer"
               className={styles.navLink}
             >
-              Login
+              Sign-in / Sign-up
             </a>
           </button>
         </div>

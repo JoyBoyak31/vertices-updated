@@ -9,7 +9,7 @@ const Footer = () => {
           <div className={styles.footerLeft}>
             <div className={styles.footerLogo}>
               <img src="/src/assets/logo/logo.png" alt="Vertices Logo" className={styles.footerLogoImg} />
-              <span className={styles.footerLogoText}>VERTICES</span>
+              <span className={styles.footerLogoText}>The Vertices</span>
             </div>
             <p className={styles.footerTagline}>AI-Powered Digital Commerce Platform</p>
           </div>
