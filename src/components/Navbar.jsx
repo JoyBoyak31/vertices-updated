@@ -17,7 +17,7 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <div className={styles.navLogo} onClick={() => handleNavClick('home')}>
-          <span className={styles.logoText}>The Vertices - updated</span>
+          <span className={styles.logoText}>The Vertices</span>
           <span className={styles.logoTagline}>connecting the dots</span>
         </div>
 

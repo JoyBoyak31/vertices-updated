@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import TokenomicsComponent from './components/Tokenomics';
-import Roadmap from './components/Roadmap';
+import Home from './components/HomePage';
+import About from './components/AboutPage';
+import TokenomicsComponent from './components/TokenomicsPage';
+import Roadmap from './components/RoadmapPage';
 import Footer from './components/Footer';
 import './App.css';
 
