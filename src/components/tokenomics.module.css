@@ -1,21 +1,32 @@
-/* Tokenomics.module.css - Updated with Large Font Sizes */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
+/* Tokenomics.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap');
 
+/* Main Wrapper */
 .tokenomicsWrapper {
-  width: 100%;
   min-height: 100vh;
-  margin-top: 100px;
   background: linear-gradient(135deg, #0f0f1b 0%, #1a1a2e 50%, #16213e 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 40px 20px;
+  color: #ffffff;
+  padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
 }
 
-.tokenomicsWrapper::before {
+/* Background Elements */
+.backgroundGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(rgba(255, 0, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 30s linear infinite;
+  pointer-events: none;
+}
+
+.backgroundGrid::before {
   content: '';
   position: absolute;
   top: 0;
@@ -25,82 +36,88 @@
   background-image: 
     radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
-  pointer-events: none;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 80px;
 }
 
 .title {
   font-family: 'Roboto', sans-serif;
-  font-size: clamp(3rem, 7vw, 4rem); /* Increased from 2rem, 5vw, 4rem */
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 900;
   background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 4rem;
-  text-align: center;
   animation: gradientShift 3s ease-in-out infinite;
+  margin-bottom: 1rem;
 }
 
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #b0b0b0;
+  font-weight: 400;
 }
 
-/* Main Container */
-.tokenomicsContainer {
+/* Circular Layout Container */
+.circularContainer {
   position: relative;
-  width: 1000px;
-  height: 1000px;
+  width: 100%;
+  height: 900px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 6rem auto;
-  max-width: 90vw;
+  margin: 0 auto 60px;
 }
 
 /* Center Circle */
 .centerCircle {
-  width: 300px;
-  height: 300px;
+  position: absolute;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ff00ff 0%, #8000ff 25%, #0080ff 50%, #00ffff 75%, #ff00ff 100%);
+  background: linear-gradient(135deg, #ff00ff, #8000ff, #0080ff, #00ffff);
   background-size: 400% 400%;
+  animation: rotate 20s linear infinite, gradientMove 8s ease-in-out infinite;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   box-shadow: 
-    0 0 60px rgba(255, 0, 255, 0.5),
-    0 0 100px rgba(0, 255, 255, 0.3),
-    inset 0 0 50px rgba(0, 255, 255, 0.2);
-  z-index: 5;
-}
-
-.visible .centerCircle {
-  animation: rotate 20s linear infinite, gradientMove 8s ease-in-out infinite;
+    0 0 60px rgba(255, 0, 255, 0.4),
+    0 0 100px rgba(0, 255, 255, 0.2);
+  z-index: 10;
 }
 
 .centerCircle::before {
   content: '';
   position: absolute;
-  width: 260px;
-  height: 260px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1a1347 0%, #2d1b5e 100%);
+  background: linear-gradient(135deg, #1a1347, #2d1b5e);
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7);
 }
 
 .innerCircle {
   position: relative;
   z-index: 2;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  background: linear-gradient(45deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
@@ -116,40 +133,40 @@
 }
 
 .tokenIcon {
-  font-size: 4rem; /* Increased from 3rem */
+  font-size: 3.5rem;
   font-weight: bold;
   color: #fff;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .tokenName {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2rem; /* Increased from 1.5rem */
+  font-size: 1.8rem;
   font-weight: bold;
   color: #00ffff;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
   letter-spacing: 2px;
 }
 
-/* Info Cards */
+/* Info Cards - Circular Layout */
 .infoCard {
   position: absolute;
+  width: 260px;
+  min-height: 180px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 20px;
-  width: 250px; /* Increased from 220px */
-  min-height: 160px; /* Increased from 140px */
-  transition: all 0.4s ease;
+  padding: 24px;
   opacity: 0;
   transform: translateY(30px);
+  transition: all 0.4s ease;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 5;
 }
 
 .visible .infoCard {
-  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .infoCard:hover {
@@ -163,7 +180,7 @@
 .cardContent {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .cardHeader {
@@ -173,8 +190,8 @@
 }
 
 .colorIndicator {
-  width: 20px; /* Increased from 16px */
-  height: 20px; /* Increased from 16px */
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   box-shadow: 0 0 15px currentColor;
   position: relative;
@@ -183,8 +200,8 @@
 .colorIndicator::after {
   content: '';
   position: absolute;
-  width: 10px; /* Increased from 8px */
-  height: 10px; /* Increased from 8px */
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.8);
   top: 50%;
@@ -193,32 +210,27 @@
 }
 
 .percentage {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2.2rem; /* Increased from 1.6rem */
+  font-size: 2rem;
   font-weight: bold;
   color: #fff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .cardTitle {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.4rem; /* Increased from 1rem */
+  font-size: 1.2rem;
   color: #fff;
   font-weight: 600;
-  margin-bottom: 4px;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .cardDescription {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.1rem; /* Increased from 0.8rem */
+  font-size: 0.95rem;
   color: #ccc;
-  font-weight: 500; /* Increased from 400 */
   line-height: 1.4;
 }
 
 .cardLine {
-  height: 4px; /* Increased from 3px */
+  height: 4px;
   width: 100%;
   border-radius: 2px;
   box-shadow: 0 0 8px currentColor;
@@ -237,139 +249,126 @@
   animation: shimmer 2s infinite;
 }
 
-/* Total Supply */
-.totalSupply {
-  position: absolute;
-  bottom: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 20px 40px; /* Increased from 16px 32px */
-  z-index: 15;
+/* Grid Layout for Mobile */
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
 }
 
-.supplyLabel {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.2rem; /* Increased from 0.9rem */
-  color: #ccc;
-  margin-bottom: 4px;
-  font-weight: 500;
-}
-
-.supplyValue {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.8rem; /* Increased from 1.2rem */
-  font-weight: bold;
-  color: #00ffff;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
-/* Mobile Cards Grid */
-.mobileCardsGrid {
-  display: none;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Increased from 280px */
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 2rem;
-}
-
-.mobileCard {
+.gridCard {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 24px; /* Increased from 20px */
-  transition: all 0.3s ease;
+  padding: 24px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.mobileCard:hover {
+.visible .gridCard {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gridCard:hover {
   background: rgba(255, 255, 255, 0.12);
   transform: translateY(-5px);
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-.mobileCardHeader {
+.gridCardHeader {
   display: flex;
   align-items: center;
-  gap: 15px; /* Increased from 12px */
-  margin-bottom: 15px; /* Increased from 12px */
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
-.mobileColorIndicator {
-  width: 20px; /* Increased from 16px */
-  height: 20px; /* Increased from 16px */
+.gridColorIndicator {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   box-shadow: 0 0 15px currentColor;
 }
 
-.mobilePercentage {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2rem; /* Increased from 1.4rem */
+.gridPercentage {
+  font-size: 2.2rem;
   font-weight: bold;
   color: #fff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.mobileCardTitle {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem; /* Increased from 1.1rem */
+.gridCardTitle {
+  font-size: 1.4rem;
   color: #fff;
   font-weight: 600;
-  margin-bottom: 10px; /* Increased from 8px */
+  margin-bottom: 12px;
+  line-height: 1.3;
 }
 
-.mobileCardDescription {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.2rem; /* Increased from 0.9rem */
+.gridCardDescription {
+  font-size: 1rem;
   color: #ccc;
   line-height: 1.5;
-  font-weight: 500;
+  margin-bottom: 16px;
 }
 
-/* Grid Background */
-.gridBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(rgba(255, 0, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.3;
+.progressBar {
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
 }
 
-.visible .gridBackground {
-  animation: gridMove 30s linear infinite;
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* Total Supply */
+.totalSupply {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.supplyLabel {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+.supplyValue {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 /* Animations */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 @keyframes rotate {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes gradientMove {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes shimmer {
@@ -384,258 +383,135 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .tokenomicsContainer {
-    width: 900px;
-    height: 900px;
+  .circularContainer {
+    height: 800px;
   }
   
   .infoCard {
-    width: 230px; /* Increased from 200px */
-    min-height: 150px; /* Increased from 130px */
-    padding: 18px; /* Increased from 16px */
+    width: 240px;
+    min-height: 160px;
+    padding: 20px;
   }
   
   .percentage {
-    font-size: 2rem; /* Increased from 1.4rem */
-  }
-  
-  .cardTitle {
-    font-size: 1.2rem; /* Increased from 0.9rem */
-  }
-  
-  .cardDescription {
-    font-size: 1rem; /* Increased from 0.75rem */
-  }
-  
-  .totalSupply {
-    bottom: 200px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .tokenomicsWrapper {
-    padding: 30px 15px;
-  }
-  
-  .tokenomicsContainer {
-    width: 750px;
-    height: 750px;
-  }
-  
-  .infoCard {
-    width: 210px; /* Increased from 180px */
-    min-height: 140px; /* Increased from 120px */
-    padding: 16px; /* Increased from 14px */
-  }
-  
-  .centerCircle {
-    width: 260px;
-    height: 260px;
-  }
-  
-  .centerCircle::before {
-    width: 220px;
-    height: 220px;
-  }
-  
-  .innerCircle {
-    width: 170px;
-    height: 170px;
-  }
-  
-  .tokenIcon {
-    font-size: 3.5rem; /* Increased from 2.5rem */
-  }
-  
-  .tokenName {
-    font-size: 1.8rem; /* Increased from 1.3rem */
-  }
-  
-  .totalSupply {
-    bottom: 170px;
-    padding: 16px 32px; /* Increased from 14px 28px */
-  }
-  
-  .supplyValue {
-    font-size: 1.5rem; /* Increased from 1.1rem */
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 900px) {
-  .tokenomicsContainer {
-    width: 650px;
-    height: 650px;
-  }
-  
-  .infoCard {
-    width: 190px; /* Increased from 160px */
-    min-height: 130px; /* Increased from 110px */
-    padding: 14px; /* Increased from 12px */
-  }
-  
-  .percentage {
-    font-size: 1.8rem; /* Increased from 1.2rem */
-  }
-  
-  .cardTitle {
-    font-size: 1.1rem; /* Increased from 0.8rem */
-  }
-  
-  .cardDescription {
-    font-size: 0.95rem; /* Increased from 0.7rem */
+  .circularContainer {
+    height: 700px;
   }
   
   .centerCircle {
-    width: 220px;
-    height: 220px;
+    width: 240px;
+    height: 240px;
   }
   
   .centerCircle::before {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
   }
   
   .innerCircle {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
   }
   
   .tokenIcon {
-    font-size: 3rem; /* Increased from 2rem */
+    font-size: 3rem;
   }
   
   .tokenName {
-    font-size: 1.5rem; /* Increased from 1.1rem */
-  }
-  
-  .totalSupply {
-    bottom: 140px;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .tokenomicsWrapper {
-    margin-top: 100px;
-    padding: 20px 15px;
+    padding: 100px 0 60px;
   }
   
-  .tokenomicsContainer {
-    width: 500px;
-    height: 700px;
-    margin-bottom: 3rem;
+  .header {
+    margin-bottom: 40px;
   }
   
-  .centerCircle {
-    width: 180px;
-    height: 180px;
-    top: 20%;
+  .gridLayout {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   
-  .centerCircle::before {
-    width: 140px;
-    height: 140px;
+  .gridCard {
+    padding: 20px;
   }
   
-  .innerCircle {
-    width: 110px;
-    height: 110px;
+  .gridPercentage {
+    font-size: 2rem;
   }
   
-  .tokenIcon {
-    font-size: 2.5rem; /* Increased from 1.5rem */
-  }
-  
-  .tokenName {
-    font-size: 1.3rem; /* Increased from 0.9rem */
-  }
-  
-  .mobileCardsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased from 250px */
-  }
-  
-  .title {
-    margin-bottom: 2rem;
-    font-size: clamp(2.5rem, 5vw, 4rem); /* Increased from 1.8rem, 4vw, 3rem */
+  .gridCardTitle {
+    font-size: 1.3rem;
   }
   
   .totalSupply {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    margin-top: 2rem;
-    padding: 15px 30px; /* Increased from 12px 24px */
-  }
-}
-
-@media (max-width: 600px) {
-  .mobileCardsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Increased from 280px */
-    gap: 1.2rem;
+    padding: 24px;
   }
   
-  .mobileCard {
-    padding: 22px; /* Increased from 18px */
-  }
-  
-  .mobilePercentage {
-    font-size: 1.8rem; /* Increased from 1.3rem */
-  }
-  
-  .mobileCardTitle {
-    font-size: 1.4rem; /* Increased from 1rem */
-  }
-  
-  .mobileCardDescription {
-    font-size: 1.1rem; /* Increased from 0.85rem */
+  .supplyValue {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .tokenomicsWrapper {
-    padding: 20px 10px;
+  .container {
+    padding: 0 16px;
   }
   
-  .tokenomicsContainer {
-    display: none;
+  .gridCard {
+    padding: 16px;
   }
   
-  .mobileCardsGrid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .gridPercentage {
+    font-size: 1.8rem;
   }
   
-  .mobileCard {
-    padding: 20px; /* Increased from 16px */
+  .gridCardTitle {
+    font-size: 1.2rem;
   }
   
-  .title {
-    font-size: clamp(2.2rem, 4.5vw, 3.5rem); /* Increased from 1.5rem, 3.5vw, 2.5rem */
-    margin-bottom: 1.5rem;
-  }
-  
-  .mobilePercentage {
-    font-size: 1.6rem; /* Increased from 1.2rem */
-  }
-  
-  .mobileCardTitle {
-    font-size: 1.3rem; /* Increased from 0.95rem */
-  }
-  
-  .mobileCardDescription {
-    font-size: 1rem; /* Increased from 0.8rem */
+  .gridCardDescription {
+    font-size: 0.9rem;
   }
   
   .totalSupply {
-    padding: 12px 24px; /* Increased from 10px 20px */
-  }
-  
-  .supplyLabel {
-    font-size: 1rem; /* Increased from 0.8rem */
+    padding: 20px;
   }
   
   .supplyValue {
-    font-size: 1.4rem; /* Increased from 1rem */
+    font-size: 1.8rem;
+  }
+}
+
+/* High DPI Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .centerCircle,
+  .infoCard,
+  .gridCard {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .centerCircle,
+  .backgroundGrid,
+  .cardLine::after {
+    animation: none;
+  }
+  
+  .infoCard,
+  .gridCard {
+    transition: opacity 0.3s ease;
   }
 }
