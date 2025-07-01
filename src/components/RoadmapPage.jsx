@@ -35,7 +35,7 @@ const Roadmap = () => {
       <section className={styles.heroSection} ref={addToRefs}>
         <div className={styles.heroContent}>
           <h1 className={styles.mainTitle}>
-            The The Vertices <span className={styles.highlight}>Roadmap</span>
+            The Vertices <span className={styles.highlight}>Roadmap</span>
           </h1>
           <p className={styles.subtitle}>
             Our journey to revolutionize global commerce through AI, blockchain, and decentralized finance
