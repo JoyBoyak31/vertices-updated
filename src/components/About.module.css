@@ -190,6 +190,204 @@
   font-size: 1.2rem;
 }
 
+/* Team Section - Updated with improved alignment and hover functionality */
+.teamSection {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.teamContainer {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: stretch; /* Changed from center to stretch for equal heights */
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.teamCard {
+  height: 100%; /* Fixed height for equal card sizes */
+  border-radius: 20px;
+  padding: 2px;
+  max-width: 400px; /* Reduced max-width for better proportions */
+  width: 100%;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 0 20px rgba(0, 188, 212, 0.3),
+    0 0 40px rgba(186, 104, 200, 0.2),
+    0 0 60px rgba(255, 112, 67, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.teamCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.teamCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 0 30px rgba(0, 188, 212, 0.5),
+    0 0 60px rgba(186, 104, 200, 0.4),
+    0 0 90px rgba(255, 112, 67, 0.3);
+}
+
+.teamCardInner {
+  border-radius: 18px;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes space evenly */
+}
+
+.avatarContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.avatarImage {
+  width: 300px !important;
+  height: 300px !important;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 188, 212, 0.3);
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Individual image classes - customize each one separately */
+.avatarImageDamir {
+  background-image: url('/images/2.png');
+  background-size: 320px 300px; /* Adjust these values for Damir's image */
+  background-position: center center;
+}
+
+.avatarImagePiyanut {
+  background-image: url('/images/1.png');
+  background-size: 320px 320px; /* Adjust these values for Piyanut's image */
+  background-position: center center;
+}
+
+/* Hide placeholder icon when background image loads */
+.avatarImageDamir .placeholderIcon,
+.avatarImagePiyanut .placeholderIcon {
+  display: none;
+}
+
+.memberInfo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.memberName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(45deg, #00bcd4, #ba68c8, #ff7043);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.memberRole {
+  font-size: 1rem;
+  color: #00bcd4;
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.memberDescription {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  min-height: 60px; /* Fixed minimum height for description area */
+  position: relative;
+  overflow: hidden;
+}
+
+.descriptionShort {
+  display: block;
+}
+
+.descriptionFull {
+  display: none;
+}
+
+.teamCard:hover .descriptionShort {
+  display: none;
+}
+
+.teamCard:hover .descriptionFull {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.socialLink:hover {
+  background: linear-gradient(45deg, #00bcd4, #ba68c8, #ff7043);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+}
+
+.socialLink svg {
+  width: 20px;
+  height: 20px;
+}
+
 /* Ecosystem Section */
 .ecosystemSection {
   padding: 4rem 0;
@@ -519,6 +717,26 @@
     width: 100%;
     max-width: 280px;
   }
+  
+  /* Team Section Mobile Responsive */
+  .teamContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  .teamCard {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    min-height: 500px;
+  }
+  
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -548,5 +766,15 @@
   
   .heroSection {
     padding: 2rem 0;
+  }
+  
+  .teamCard {
+    max-width: 300px;
+    min-height: 450px;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
   }
 }
